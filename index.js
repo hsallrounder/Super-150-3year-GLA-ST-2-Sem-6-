@@ -18,13 +18,13 @@ const dbUrl = process.env.DB_URI
 const port = process.env.PORT
 
 const sessionSecret = process.env.SESSION_SECRET
+
 mongoose.set('strictQuery', true);
 
 //Connect to DB
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log(" DB CONNECTED!"))
   .catch((err) => console.log(err));
-
 
 
 const sessionflash = {
